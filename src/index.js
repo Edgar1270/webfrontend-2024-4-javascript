@@ -20,11 +20,14 @@ function calcularValorComDesconto(valorTotal, metodoPagamento) {
 // Função para exibir o resultado
 function exibirResultado({ numeroPessoas, valorTotal, metodoPagamento }) {
     const valorFinal = calcularValorComDesconto(valorTotal, metodoPagamento);
+    const valorPorPessoa = valorFinal / numeroPessoas;
+
     console.log("");
     console.log(`Número de pessoas na mesa: ${numeroPessoas}`);
     console.log(`Valor total da conta: R$${valorTotal.toFixed(2)}`);
     console.log(`Forma de pagamento: ${metodoPagamento}`);
-    console.log(`Valor a ser pago: R$${valorFinal.toFixed(2)}`);
+    console.log(`Valor total a ser pago: R$${valorFinal.toFixed(2)}`);
+    console.log(`Valor por pessoa: R$${valorPorPessoa.toFixed(2)}`);
 }
 
 // Execução do programa
